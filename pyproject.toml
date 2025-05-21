@@ -1,0 +1,55 @@
+[project]
+name = "mcp-math-demo"
+version = "0.1.0"
+description = "测试用的"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    {name = "开发团队"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "fastmcp>=2.3.4",
+    "langchain-deepseek>=0.1.3",
+    "langchain-mcp-adapters>=0.1.1",
+    "langgraph>=0.4.5",
+    "mcp[cli]>=1.6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+]
+lint = [
+]
+
+[project.scripts]
+example = "example.main:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["example"]
+
+[tool.setuptools.package-data]
+example = ["*"]
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I"]
+
+[[tool.uv.index]]
+name = "mypypi"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+publish-url = "http://your.pypi/"
+default = true
+
+[tool.uv.workspace]
+members = []
