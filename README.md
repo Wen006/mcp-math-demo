@@ -1,61 +1,90 @@
 # MCP数学演示项目
 
+这是一个使用MCP（Mathematical Computing Platform）的Python演示项目，旨在帮助初学者了解和学习数学计算的基本概念和应用。
+
 ## 项目简介
-这是一个用于演示MCP（Mathematical Computing Platform）功能的示例项目。MCP是一个强大的数学计算平台，可以帮助用户进行各种数学运算和可视化。
 
-## 功能特点
-- 基础数学运算
-- 数据可视化
-- 数学公式展示
-- 交互式计算
+本项目展示了如何通过代码调用MCP（sse和stdio）
+- MCP的sse方式
+- MCP的stdio方式
+- 如何结合大模型调用MCP
 
-## 快速开始
+## 环境要求
+安装uv https://docs.astral.sh/uv/getting-started/installation/
 
-### 环境要求
-- Node.js 16.0 或更高版本
-- npm 或 yarn 包管理器
+## 安装步骤
 
-### 安装步骤
-1. 克隆项目到本地
+1. 克隆项目到本地：
 ```bash
 git clone [项目地址]
+cd mcp-math-demo
 ```
 
-2. 安装依赖
+2. 创建并激活虚拟环境（推荐）：
 ```bash
-npm install
+# 创建虚拟环境（工程中会多一个.venv 文件），并激活环境
+uv venv
+# 激活环境，mac和window 有点差异，需注意下
+source .venv/bin/activate
 # 或
-yarn install
+.\venv\Scripts\activate  # Windows
 ```
 
-3. 启动项目
+3. 安装依赖包：
 ```bash
-npm start
-# 或
-yarn start
+uv pip install -e .
 ```
-
-## 使用指南
-1. 打开浏览器访问 `http://localhost:3000`
-2. 在界面中选择需要使用的数学功能
-3. 输入相关参数
-4. 查看计算结果和可视化展示
 
 ## 项目结构
+
 ```
 mcp-math-demo/
-├── src/            # 源代码目录
-├── public/         # 静态资源
-├── package.json    # 项目配置文件
-└── README.md       # 项目说明文档
+├── README.md
+├── requirements.txt
+├── src/
+│   └── main.py
+└── examples/
+    └── basic_math.py
 ```
 
-## 常见问题
-1. 如果遇到依赖安装问题，请确保Node.js版本正确
-2. 如果启动失败，请检查端口是否被占用
+## 使用说明
+
+1. sse 启动
+```bash
+uv run src/example/server-math-sse.py
+```
+
+2. stdio调试
+```bash
+uv run mcp dev src/example/server-math-stdio.py
+```
+
+3. 启动客户
+```bash
+uv run src/example/client-langchain.py
+```
+
+4. 调试客户端
+....
+
+详情可以查看：
+https://mtqth1thwc.feishu.cn/wiki/TLyuw5GlziSL5Kk7xzScuEMgn1c?from=from_copylink
+
+## 学习资源
+- [Python官方文档](https://docs.python.org/zh-cn/3/)
+- [NumPy文档](https://numpy.org/doc/stable/)
+- [Matplotlib文档](https://matplotlib.org/)
 
 ## 贡献指南
-欢迎提交Issue和Pull Request来帮助改进项目。
+
+欢迎提交问题和改进建议！如果您想贡献代码，请遵循以下步骤：
+
+1. Fork 本仓库
+2. 创建您的特性分支
+3. 提交您的更改
+4. 推送到您的分支
+5. 创建一个新的 Pull Request
 
 ## 许可证
-MIT License
+
+本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件
