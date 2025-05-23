@@ -72,8 +72,19 @@ https://mtqth1thwc.feishu.cn/wiki/TLyuw5GlziSL5Kk7xzScuEMgn1c?from=from_copylink
 
 ## 学习资源
 - [Python官方文档](https://docs.python.org/zh-cn/3/)
-- [NumPy文档](https://numpy.org/doc/stable/)
-- [Matplotlib文档](https://matplotlib.org/)
+- [MCP官方文档](https://modelcontextprotocol.io/introduction) 
+
+### 开发工具
+- **Uv/Uvx**: 高效的Python虚拟环境管理工具
+  - [官方文档](https://docs.astral.sh/uv/)
+
+- **NPX**: 无需安装即可运行npm包命令的工具（Node 18+）
+  - [使用说明](https://www.tkcnn.com/npm/commands/npx.html)
+  - 用于启动调试工具：`npx @modelcontextprotocol/inspector@0.6.0`
+
+- **NVM**: Node.js版本管理工具
+  - [Unix/Linux版本](https://github.com/nvm-sh/nvm)
+  - [Windows版本](https://github.com/coreybutler/nvm-windows)（需要管理员权限）
 
 ## 贡献指南
 
