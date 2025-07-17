@@ -68,7 +68,7 @@ uv run src/example/client-langchain.py
 ....
 
 详情可以查看：
-https://mtqth1thwc.feishu.cn/wiki/TLyuw5GlziSL5Kk7xzScuEMgn1c?from=from_copylink
+[https://mtqth1thwc.feishu.cn/wiki/TLyuw5GlziSL5Kk7xzScuEMgn1c?from=from_copylink](https://blog.csdn.net/weixin_53122830/article/details/148120229)
 
 ## 学习资源
 - [Python官方文档](https://docs.python.org/zh-cn/3/)
